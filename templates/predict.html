@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Chatbot</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style/predict.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style/home.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style/normalize.css') }}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+        <nav class = "navbar bg-blue">
+            <div class = "container flex">
+                <a href = "index.html" class = "navbar-brand">
+					<button type = "button" class="nav-item-title">
+						<text>DigiDoc</text>
+                    </button>
+                </a>
+                <button type = "button" class = "navbar-show-btn">
+                    <img src = "static/images/ham-menu-icon.png">
+                </button>
+
+                <div class = "navbar-collapse bg-white">
+                    <button type = "button" class = "navbar-hide-btn">
+                        <img src = "static/images/close-icon.png">
+                    </button>
+                    <ul class = "navbar-nav">
+                        <li class = "nav-item">
+                            <a href = "{{url_for('home')}}" class = "nav-link">Home</a>
+                        </li>
+                    </ul>
+                    
+                </div> 
+            </div>
+        </nav> 
+	<section class="msger">
+		<header class="msger-header">
+			<div class="msger-header-title">
+				<i class="fas fa-bug"></i> MediBot <i class="fas fa-bug"></i>
+			</div>
+		</header>
+
+		<main class="msger-chat">
+			
+
+		</main>
+
+		<form class="msger-inputarea">
+			<input type="text" class="msger-input" id="textInput" placeholder="Enter your message...">
+			<button type="submit" class="msger-send-btn">Send</button>
+		</form>
+	</section>
+	<!-- partial -->
+	<script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+	<script src = "{{ url_for('static', filename='script/predict.js') }}"></script>
+
+</body>
+
+</html>
